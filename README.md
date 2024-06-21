@@ -43,3 +43,44 @@ List<Integer> comprimentos = palavras.stream()
                                      .collect(Collectors.toList());
 ```
 
+
+# Interfaces Funcionais em Java
+## Supplier
+Supplier é uma interface funcional que não recebe argumentos e fornece um resultado.
+
+```java
+
+import java.util.function.Supplier;
+
+Supplier<Double> randomNumberSupplier = Math::random;
+double randomValue = randomNumberSupplier.get();
+```
+## Consumer
+Consumer é uma interface funcional que recebe um argumento e não retorna nada.
+
+```java
+
+import java.util.function.Consumer;
+
+Consumer<String> printString = System.out::println;
+printString.accept("Hello, Consumer!");
+```
+## Function
+Function é uma interface funcional que recebe um argumento e produz um resultado.
+```java
+
+import java.util.function.Function;
+
+Function<String, Integer> stringLength = String::length;
+int length = stringLength.apply("Hello, Function!");
+```
+## Predicate
+Predicate é uma interface funcional que recebe um argumento e retorna um valor booleano.
+
+```java
+
+import java.util.function.Predicate;
+
+Predicate<Integer> isEven = num -> num % 2 == 0;
+boolean result = isEven.test(4); // true
+```
