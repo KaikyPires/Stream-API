@@ -84,3 +84,13 @@ import java.util.function.Predicate;
 Predicate<Integer> isEven = num -> num % 2 == 0;
 boolean result = isEven.test(4); // true
 ```
+## BinaryOperator
+BinaryOperator é uma interface funcional que representa uma operação que recebe dois operandos do mesmo tipo e retorna um resultado do mesmo tipo.
+
+```java
+
+import java.util.function.BinaryOperator;
+
+BinaryOperator<Integer> sum = (a, b) -> a + b;
+int result = sum.apply(3, 5); // result = 8
+```
