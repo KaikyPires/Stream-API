@@ -1,4 +1,4 @@
-package Testes;
+
 public class Pessoas {
     private String nome;
     private double altura;
